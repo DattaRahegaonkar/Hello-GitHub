@@ -14,8 +14,8 @@ factorial_result = factorial(5)
 
 def prime(n):
     """Check if a number is prime."""
-    for idx in range(2, n):
-        if n % idx == 0:
+    for i in range(2, n):  # renamed from 'idx' to 'i'
+        if n % i == 0:
             return False
     return True
 
@@ -38,12 +38,12 @@ def fibonacci(n):
 
 
 input_list = [1, 2, 3, 2, 1]
-half_length = int(len(input_list) / 2)
+half_len = int(len(input_list) / 2)  # renamed to avoid constant naming warning
 
-for idx in range(half_length):
-    if input_list[idx] != input_list[-(idx + 1)]:
+for index in range(half_len):  # renamed from 'idx' to 'index'
+    if input_list[index] != input_list[-(index + 1)]:
         print("Not a palindrome")
         break
 
-
 # print(input_list)
+
