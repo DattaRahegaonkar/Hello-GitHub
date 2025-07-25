@@ -1,5 +1,6 @@
 """This module contains basic examples of recursion and palindrome checking."""
 
+
 def factorial(n):
     """Return the factorial of a number."""
     if n in (0, 1):
@@ -18,6 +19,7 @@ def prime(n):
             return False
     return True
 
+
 # print(prime(7))
 
 
@@ -31,6 +33,7 @@ def fibonacci(n):
 
     return fnm1 + fnm2
 
+
 # print(fibonacci(4))
 
 
@@ -42,5 +45,5 @@ for idx in range(half_length):
         print("Not a palindrome")
         break
 
-# print(input_list)
 
+# print(input_list)
