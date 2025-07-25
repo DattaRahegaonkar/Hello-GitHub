@@ -1,31 +1,31 @@
-#hello
-
-# This code calculates the sum of all values in a dictionary
-
+"""This module contains basic examples of recursion and palindrome checking."""
 
 def factorial(n):
-    if n == 0 or n == 1:
+    """Return the factorial of a number."""
+    if n in (0, 1):
         return 1
-    else:
-        return n * factorial(n - 1)
-    
+    return n * factorial(n - 1)
+
 
 factorial_result = factorial(5)
 # print(factorial_result)
 
 
 def prime(n):
-    for i in range(2, n):
-        if n % i == 0:
+    """Check if a number is prime."""
+    for idx in range(2, n):
+        if n % idx == 0:
             return False
     return True
 
 # print(prime(7))
 
+
 def fibonacci(n):
-    if n == 0 or n == 1:
+    """Return the nth Fibonacci number."""
+    if n in (0, 1):
         return n
-    
+
     fnm1 = fibonacci(n - 1)
     fnm2 = fibonacci(n - 2)
 
@@ -34,15 +34,13 @@ def fibonacci(n):
 # print(fibonacci(4))
 
 
-list = [1,2,3,2,1]
+input_list = [1, 2, 3, 2, 1]
+half_length = int(len(input_list) / 2)
 
-length = (int(len(list)))/2
-
-for i in range(length):
-    j=i+1
-    if list[i] != list[-j]:
+for idx in range(half_length):
+    if input_list[idx] != input_list[-(idx + 1)]:
         print("Not a palindrome")
         break
 
-# print(list)
+# print(input_list)
 
